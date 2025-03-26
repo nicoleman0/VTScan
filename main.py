@@ -5,8 +5,9 @@ from generate import generate_html_report
 
 def main():
     urls = [
-        "http://example.com",
-        "http://malicious-site.com"
+        "example.com",
+        "malware.com"
+        # Add more URLs here
     ]
 
     results = []
