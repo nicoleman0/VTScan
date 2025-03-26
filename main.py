@@ -1,4 +1,4 @@
-from core import scan_url, get_url_report
+from scan import scan_url, get_url_report
 from workbook import save_to_excel
 from generate import generate_html_report
 
