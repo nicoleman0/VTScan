@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VirusTotal URL Report</title>
+</head>
+<body>
+  <h1>VirusTotal URL Scan Report</h1>
+  <table border="1">
+    <tr>
+      <th>URL</th>
+      <th>Malicious</th>
+      <th>Harmless</th>
+      <th>Undetected</th>
+    </tr>
+    {% for result in results %}
+    <tr>
+      <td>{{ result.url }}</td>
+      <td>{{ result.malicious }}</td>
+      <td>{{ result.harmless }}</td>
+      <td>{{ result.undetected }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
