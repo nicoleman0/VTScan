@@ -1,9 +1,11 @@
-from scan import scan_url, get_url_report
+from scan import scan_url, get_url_report, get_api_key
 from workbook import save_to_excel
 from generate import generate_html_report
 
 
 def main():
+    api_key = get_api_key()  # Get the API key from user input
+
     urls = [
         "example.com",
         "malware.com"
@@ -12,9 +14,10 @@ def main():
 
     results = []
     for url in urls:
-        scan_id = scan_url(url)
+        scan_id = scan_url(url, api_key)  # Pass the API key to scan_url
         if scan_id:
-            report = get_url_report(scan_id)
+            # Pass the API key to get_url_report
+            report = get_url_report(scan_id, api_key)
             if report:
                 stats = report.results.get('attributes', {}).get('stats', {})
                 results.append({

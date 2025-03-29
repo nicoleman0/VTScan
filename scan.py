@@ -1,19 +1,18 @@
 import vt
 import time
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
-API_KEY = os.getenv('VT_API_KEY')
-if not API_KEY:
-    raise ValueError(
-        "API key not found. Please create a .env file with VT_API_KEY=<your_api_key>")
 
 
-def scan_url(url):
+def get_api_key():
+    """Prompts the user to enter their VirusTotal API key."""
+    api_key = input("Please enter your VirusTotal API key: ")
+    if not api_key:
+        raise ValueError("API key cannot be empty.")
+    return api_key
+
+
+def scan_url(url, api_key):
     """Scan a URL using VirusTotal API."""
-    with vt.Client(API_KEY) as client:
+    with vt.Client(api_key) as client:
         try:
             analysis = client.scan_url(url)
             print(f"Scanning URL: {url} | Analysis ID: {analysis.id}")
@@ -23,9 +22,9 @@ def scan_url(url):
             return None
 
 
-def get_url_report(scan_id):
+def get_url_report(scan_id, api_key):
     """Get the report for a given analysis ID."""
-    with vt.Client(API_KEY) as client:
+    with vt.Client(api_key) as client:
         try:
             while True:
                 analysis = client.get_object(f"/analyses/{scan_id}")
