@@ -16,7 +16,7 @@ VTScan - an simple FOSS Python-based command-line tool designed to scan URLs usi
 
 *  **Clone the repository (or download the files):**
     ```bash
-    git clone https://github.com/nicoleman0/VTScan # Replace <repository_url> with the actual URL if you have a repo
+    git clone https://github.com/nicoleman0/VTScan 
     cd VTScan
     ```
 
