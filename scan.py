@@ -3,7 +3,6 @@ import time
 
 
 def get_api_key():
-    """Prompts the user to enter their VirusTotal API key."""
     api_key = input("Please enter your VirusTotal API key: ")
     if not api_key:
         raise ValueError("API key cannot be empty.")
@@ -11,7 +10,6 @@ def get_api_key():
 
 
 def scan_url(url, api_key):
-    """Scan a URL using VirusTotal API."""
     with vt.Client(api_key) as client:
         try:
             analysis = client.scan_url(url)
