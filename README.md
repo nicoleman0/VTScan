@@ -24,7 +24,7 @@ VTScan - an simple FOSS Python-based command-line tool designed to scan URLs usi
 
 *  **Run the script:**
     ```bash
-    python main.py
+    python3 main.py
     ```
 
 *  **View the reports:**
@@ -38,10 +38,10 @@ VTScan - an simple FOSS Python-based command-line tool designed to scan URLs usi
     *   To scan for URLs:   
         
         ```bash
-        python main.py example.com malware.com another-url.net
+        python3 main.py example.com malware.com another-url.net
         ```
     *   For help:
         ```bash
-            python main.py --help
-            python main.py -h
+            python3 main.py --help
+            python3 main.py -h
         ```
