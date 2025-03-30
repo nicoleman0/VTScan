@@ -10,6 +10,11 @@ def get_api_key():
 
 
 def scan_url(url, api_key):
+    """Scan a URL.
+
+    Args:
+        url (str): The URL to scan.
+        api_key (str): Your VirusTotal API key."""
     with vt.Client(api_key) as client:
         try:
             analysis = client.scan_url(url)
