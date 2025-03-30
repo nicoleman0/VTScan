@@ -33,6 +33,12 @@ Run the tool using the following command:
 python main.py <url1> <url2> ... [options]
 ```
 
+To see the available options, run:
+
+```bash
+python main.py --help
+```
+
 ## 📜 License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
