@@ -1,47 +1,39 @@
-# VTScan - a VirusTotal URL Scanner
+# 🛡️ VTScan: VirusTotal URL Scanner
 
-VTScan - an simple FOSS Python-based command-line tool designed to scan URLs using the VirusTotal API, collect scan results, and generate both Excel and HTML reports. Its purpose is to streamline the process of checking multiple URLs for potential threats.
+VTScan is a command-line tool for scanning URLs using the VirusTotal API and generating reports.
 
-## Prerequisites
+## ✨ Features
 
-*   **Python 3.x:** Ensure you have Python 3 installed on your system.
-*   **VirusTotal API Key:** You need a valid VirusTotal API key. You can obtain one by creating a free account on the VirusTotal website.
-*   **Python Packages:** Install the required Python packages using pip:
+- 🕵️ Scan multiple URLs against VirusTotal.
+- 🔑 Provide your API key as an option or when prompted.
+- 📊 Generate results as an Excel file (`results.xlsx`) and an HTML report (`report.html`).
+- 🟢 Clear progress updates and error handling.
+
+## 🛠 Prerequisites
+
+- 🐍 Python 3.7+
+- 🛡️ VirusTotal API Key (available for free from VirusTotal)
+- 📦 Python packages: `typer`, `typing_extensions`, `vt`, `pandas`, `jinja2`
+
+## 🚀 Installation
+
+1. Clone the repository or download the files.
+2. Navigate to the project directory.
+3. Install the required dependencies:
 
     ```bash
-    pip install vt python-dotenv pandas jinja2
+    pip install typer typing_extensions vt pandas jinja2
     ```
 
-## Installation
+## 🧑‍💻 Usage
 
-*  **Clone the repository (or download the files):**
-    ```bash
-    git clone https://github.com/nicoleman0/VTScan 
-    cd VTScan
-    ```
+Run the tool using the following command:
 
-## How to Use
+```bash
+python main.py <url1> <url2> ... [options]
+```
 
-*  **Run the script:**
-    ```bash
-    python3 main.py
-    ```
+## 📜 License
 
-*  **View the reports:**
-    *   After the script finishes, you will find two report files in the `VTScan` directory:
-        *   `results.xlsx`: An Excel file containing the scan results.
-        *   `report.html`: An HTML file with a formatted report.
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-## Commands
-
-*   **URL Scanning**
-    *   To scan for URLs:   
-        
-        ```bash
-        python3 main.py example.com malware.com another-url.net
-        ```
-    *   For help:
-        ```bash
-            python3 main.py --help
-            python3 main.py -h
-        ```
