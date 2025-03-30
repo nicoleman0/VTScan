@@ -30,13 +30,13 @@ VTScan is a command-line tool for scanning URLs using the VirusTotal API and gen
 Run the tool using the following command:
 
 ```bash
-python main.py <url1> <url2> ... [options]
+python3 main.py <url1> <url2> ... [options]
 ```
 
 To see the available options, run:
 
 ```bash
-python main.py --help
+python3 main.py --help
 ```
 
 ## 📜 License
